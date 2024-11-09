@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riya Logo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Playfair+Display:wght@700&display=swap');
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle, #9c0720, #ff7eb3, #fad0c4);
+      overflow: hidden;
+      font-family: 'Sacramento', cursive;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      animation: floating 5s infinite ease-in-out;
+    }
+
+    .logo::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      filter: blur(15px);
+      z-index: -1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkle 3s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translate(30px, 20px) scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    Riya
+    <div class="sparkle" style="top: 10%; left: 20%;"></div>
+    <div class="sparkle" style="top: 70%; left: 80%;"></div>
+    <div class="sparkle" style="top: 50%; left: 50%;"></div>
+  </div>
+</body>
+</html>
